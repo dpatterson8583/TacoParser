@@ -14,6 +14,12 @@
             logger.LogInfo("Parser: -------------");
             logger.LogInfo("Parser: Begin parsing");
 
+            if(line==null)
+            {
+                logger.LogInfo("Parser: Line is null.  Exiting Parse with 'null'.");
+                return null;
+            }
+
             // Take your line and use line.Split(',') to split it up into an array of strings, separated by the char ','
             var cells = line.Split(',');
             logger.LogInfo("Parser: Record split at commas");

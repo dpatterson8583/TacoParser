@@ -62,7 +62,7 @@ namespace LoggingKata
             GeoCoordinate GeoCoord2;
             Point corA = new Point();
             Point corB = new Point();
-            double tmpDistance;
+            double tmpDistance=0;
             logger.LogInfo($"Main: GeoCoordinate objects and Point corA and corB objects and tmpDistance established");
 
             foreach (var locA in locations)
@@ -109,10 +109,10 @@ namespace LoggingKata
             // If the distance is greater than the currently saved distance, update the distance and the two `ITrackable` variables you set above
 
             // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
-
-            Console.WriteLine($"{TBtrack1.Name}");
-            Console.WriteLine($"{TBtrack2.Name}");
-            Console.WriteLine($"{TBdistance}");
+            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine($"{TBtrack1.Name} and {TBtrack2.Name}");
+            Console.WriteLine($"are {Math.Round(TBdistance,2)} meters apart");
+            Console.WriteLine("-------------------------------------------------------------");
         }
     }
 }
